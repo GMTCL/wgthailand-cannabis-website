@@ -1,3 +1,5 @@
+import React from 'react'
+
 function App() {
   return (
     <div style={{ 
@@ -42,7 +44,16 @@ function App() {
           textDecoration: 'none',
           fontSize: '1.2rem',
           fontWeight: 'bold',
-          boxShadow: '0 4px 15px rgba(104, 211, 145, 0.3)'
+          boxShadow: '0 4px 15px rgba(104, 211, 145, 0.3)',
+          transition: 'all 0.3s ease'
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.transform = 'translateY(-2px)'
+          e.target.style.boxShadow = '0 6px 20px rgba(104, 211, 145, 0.4)'
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.transform = 'translateY(0)'
+          e.target.style.boxShadow = '0 4px 15px rgba(104, 211, 145, 0.3)'
         }}
       >
         📱 สั่งซื้อผ่าน Line OA
